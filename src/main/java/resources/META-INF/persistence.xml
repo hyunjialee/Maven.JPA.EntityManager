@@ -1,0 +1,5 @@
+<persistence>
+    <!-- Define persistence unit -->
+    <persistence-unit name="my-persistence-unit">
+    </persistence-unit>
+</persistence>
