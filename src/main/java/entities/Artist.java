@@ -12,14 +12,15 @@ public class Artist {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "id")
-    private Set<CD> cds = new HashSet<>();
-
     public Artist(){
     }
 
     public Artist(int id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public Artist(String name) {
         this.name = name;
     }
 
