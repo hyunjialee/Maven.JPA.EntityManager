@@ -17,6 +17,7 @@ public class ArtistService {
         transaction.begin();
         manager.persist(artist);
         transaction.commit();
+        manager.close();
     }
 
     public Artist findByID(int id){
@@ -28,6 +29,7 @@ public class ArtistService {
             transaction.begin();;
             manager.merge(arist);
             transaction.commit();
+            manager.close();
         }
     }
 
