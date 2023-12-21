@@ -1,8 +1,19 @@
 package entities;
 
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(name = "artist")
 public class Artist {
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
+
+    @OneToMany(mappedBy = "id")
+    private Set<CD> cds = new HashSet<>();
 
     public Artist(){
     }

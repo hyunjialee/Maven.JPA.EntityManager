@@ -1,13 +1,10 @@
 package services;
 
-
-import javax.persistence.Entity;
-import javax.persistence.EntityManager;
+import javax.persistence.PersistenceUnit;
 import java.util.List;
 
-@Entity
-public class Service implements ServiceCRUD {
 
+public class CDService implements ServiceCRUD {
 
     @Override
     public Object findById(int id) {

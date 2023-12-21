@@ -1,9 +1,17 @@
 package entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "cd")
 public class CD {
+    @Id
+    @GeneratedValue
     private int id;
     private String title;
+    @OneToOne(cascade = {CascadeType.ALL})
     private Artist name;
+
 
 
     public CD(){
